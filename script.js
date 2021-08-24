@@ -48,54 +48,97 @@ document.addEventListener("DOMContentLoaded", () => {
 	//  SLIDERS
 
 	const coursesContent = document.querySelector(".courses-content"),
+		sliderIndicators = document.querySelector(".courses-slider-indicator"),
+		carouseIndicators = document.querySelector(".carouse-slider-indicator"),
 		coursesWrapper = document.querySelector(".courses-wrapper"),
 		carouseWrapper = document.querySelector(".carouse-wrapper"),
 		carouseSlider = document.querySelectorAll(".itemlar"),
-		carouseItem = document.querySelectorAll(".carouse-items"),
-		pass = document.querySelectorAll(".pass");
+		carouseItem = document.querySelectorAll(".carouse-items");
 
-	let offset = 0,
+	let playCourses,
+		playCarouse,
+		slideIndex = 1,
+		dotsOne = [],
+		dotsTwo = [],
+		offset = 0,
 		onset = 0,
+		cont = 1,
 		coursesItemWidth = window.getComputedStyle(carouseSlider[0]).width,
 		carouseItemWidth = window.getComputedStyle(carouseItem[0]).width;
 
-	function courses() {
-		setInterval(() => {
+	let courses = () => {
+		playCourses = setInterval(function () {
 			if (
 				onset ==
 				parseFloat(coursesItemWidth) * (carouseSlider.length - 3)
 			) {
 				onset = 0;
+				slideIndex = 1;
 			} else {
 				onset += parseFloat(coursesItemWidth);
+				slideIndex++;
 			}
 			coursesWrapper.style.transform = ` translateX( -${onset}px ) `;
-		}, 3000);
-	}
+			dotsOne.forEach((slide) => (slide.style.opacity = "0.5"));
+			dotsOne[slideIndex - 1].style.opacity = 1;
+		}, 5000);
+	};
 	courses();
-	function carouse() {
-		setInterval(() => {
+	//stop the image slider autoplay on mouseover
+	coursesContent.addEventListener("mouseover", () => {
+		clearInterval(playCourses);
+	});
+	//start the image slider autoplay again on mouseout
+	coursesContent.addEventListener("mouseout", () => {
+		courses();
+	});
+
+	for (let i = 0; i < carouseSlider.length - 2; i++) {
+		const dot = document.createElement("li");
+		dot.setAttribute("data-slide-to", i + 1);
+		dot.classList.add("pass");
+		sliderIndicators.append(dot);
+		if (i == 0) {
+			dot.style.opacity = 1;
+		}
+		dotsOne.push(dot);
+	}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+	let carouse = () => {
+		playCarouse = setInterval(function () {
 			if (
 				offset ==
 				parseFloat(carouseItemWidth) * (carouseItem.length - 1)
 			) {
 				offset = 0;
+				cont = 1;
 			} else {
 				offset += parseFloat(carouseItemWidth);
+				cont++;
 			}
 			carouseWrapper.style.transform = ` translateX( -${offset}px ) `;
-		}, 3000);
-	}
+			dotsTwo.forEach((slide) => (slide.style.opacity = "0.5"));
+			dotsTwo[cont - 1].style.opacity = 1;
+		}, 5000);
+	};
 	carouse();
+	//stop the image slider autoplay on mouseover
+	carouseWrapper.addEventListener("mouseover", () => {
+		clearInterval(playCarouse);
+	});
+	//start the image slider autoplay again on mouseout
+	carouseWrapper.addEventListener("mouseout", () => {
+		carouse();
+	});
 
-	coursesContent.addEventListener("mouseenter", () => {
-		clearInterval(courses())
-	})
-
-	// for (let i = 0; i < pass.length; i++) {
-	// 	pass[i].setAttribute("data-slide-to", i + 1);
-	// 	if (i == 0) {
-	// 		pass[i].style.opacity = 1;
-	// 	}
-	// }
+	for (let i = 0; i < carouseItem.length; i++) {
+		const dotCarouse = document.createElement("li");
+		dotCarouse.setAttribute("data-slide-to", i + 1);
+		dotCarouse.classList.add("pass");
+		carouseIndicators.append(dotCarouse);
+		if (i == 0) {
+			dotCarouse.style.opacity = 1;
+		}
+		dotsTwo.push(dotCarouse);
+	}
 });
