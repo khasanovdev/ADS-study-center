@@ -7,30 +7,24 @@ body {
 	background-color: #fff;
 	font-family: "Roboto", sans-serif;
 }
-
 .header {
 	background-color: #f8f8f8;
 }
-
 .header .header-left {
 	display: flex;
 	align-items: center;
 }
-
 .header .header-left .header-left-item {
 	display: flex;
 }
-
 .header .header-left .header-left-item .email-item {
 	display: flex;
 	align-items: baseline;
 }
-
 .header .header-left .header-left-item .email-item i {
 	margin-right: 10px;
 	font-size: 13px;
 }
-
 .header .header-left .header-left-item .phone-item {
 	display: flex;
 	margin-left: 20px;
@@ -38,22 +32,18 @@ body {
 	padding-left: 15px;
 	align-items: baseline;
 }
-
 .header .header-left .header-left-item .phone-item i {
 	margin-right: 10px;
 	font-size: 13px;
 }
-
 .header .header-right {
 	display: flex;
 	justify-content: flex-end;
 }
-
 .header .header-right .header-right-item .media-icons {
 	display: flex;
 	align-items: center;
 }
-
 .header .header-right .header-right-item .media-icons ul {
 	list-style: none;
 	display: flex;
@@ -61,30 +51,24 @@ body {
 	justify-content: flex-end;
 	margin: 10px 0;
 }
-
 .header .header-right .header-right-item .media-icons ul li {
 	margin-left: 20px;
 }
-
 .nav {
 	z-index: 99;
 }
-
 .nav .container {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 10px 0 0 0;
 }
-
 .nav .container .navbar-brand {
 	margin: 0;
 }
-
 .nav .container .navbar-item {
 	color: #777;
 }
-
 .nav .container .navbar-item .dropdown-toggle,
 .nav .container .navbar-item .home {
 	font-size: 16px;
@@ -96,61 +80,49 @@ body {
 	border-bottom: 3px solid transparent;
 	background-color: transparent;
 }
-
 .nav .container .navbar-item .dropdown-toggle:hover,
 .nav .container .navbar-item .home:hover {
 	color: #c2212b;
 	border-bottom: 3px solid #c2212b;
 }
-
 .nav .container .navbar-item .dropdown-toggle:active,
 .nav .container .navbar-item .home:active {
 	background-color: #c2212b !important;
 }
-
 .nav .container .navbar-item .dropdown-menu {
 	border: none;
 }
-
 .nav .container .navbar-item .dropdown-menu .dropdown-item {
 	background-color: transparent;
 	transition: 0.4s linear;
 	color: #777;
 }
-
 .nav .container .navbar-item .dropdown-menu .dropdown-item:hover {
 	background-color: #c2212b !important;
 	color: #fff;
 }
-
 .nav .container .menu-btn {
 	margin-right: 5px;
 	font-size: 20px;
 	display: none;
 }
-
 .nav .container::before {
 	content: none !important;
 }
-
 .nav .container::after {
 	content: none !important;
 }
-
 .nav::before {
 	content: none !important;
 }
-
 .nav::after {
 	content: none !important;
 }
-
 .menu-content {
 	display: flex;
 	flex-direction: column;
 	z-index: -99;
 }
-
 .menu-content .dropdown-toggle,
 .menu-content .home {
 	font-size: 16px;
@@ -162,39 +134,32 @@ body {
 	border-bottom: 3px solid transparent;
 	background-color: transparent;
 }
-
 .menu-content .dropdown-toggle:hover,
 .menu-content .home:hover {
 	color: #c2212b;
 	border-bottom: 3px solid #c2212b;
 }
-
 .menu-content .dropdown-toggle:active,
 .menu-content .home:active {
 	background-color: #c2212b !important;
 }
-
 .menu-content .dropdown-menu {
 	border: none;
 }
-
 .menu-content .dropdown-menu .dropdown-item {
 	background-color: transparent;
 	transition: 0.4s linear;
 	color: #777;
 }
-
 .menu-content .dropdown-menu .dropdown-item:hover {
 	background-color: #c2212b !important;
 	color: #fff;
 }
-
 .slider .slide .carousel-control-next,
 .slider .slide .carousel-control-prev {
 	width: 4%;
 	cursor: default;
 }
-
 .slider .slide .carousel-control-next .control-box,
 .slider .slide .carousel-control-prev .control-box {
 	width: 50px;
@@ -205,13 +170,12 @@ body {
 	justify-content: center;
 	cursor: pointer;
 }
-
 .slider .slide .carousel-inner .carousel-item img {
 	filter: brightness(60%);
 }
-
 .slider .slide .carousel-inner .carousel-item .caption {
 	position: absolute;
+	/* transform: translate(0px, -270px); */
 	color: #fff;
 	left: 0;
 	right: 0;
@@ -224,33 +188,28 @@ body {
 	cursor: default;
 	font-family: "Montserrat", sans-serif;
 }
-
 .slider .slide .carousel-inner .carousel-item .caption h4 {
 	letter-spacing: 1px;
 	font-size: 18px;
 }
-
 .slider .slide .carousel-inner .carousel-item .caption span {
 	display: inline-block;
 	height: 1px;
 	width: 100px;
 	background-color: #c2212b;
 }
-
 .slider .slide .carousel-inner .carousel-item .caption h2 {
 	font-size: 50px;
 	line-height: 80px;
 	margin-bottom: 10px;
 	font-weight: 700;
 }
-
 .slider .slide .carousel-inner .carousel-item .caption p {
 	font-size: 18px;
 	letter-spacing: 0.5px;
 	line-height: 28px;
 	margin: 0 0 40px;
 }
-
 .slider .slide .carousel-inner .carousel-item .caption a {
 	text-transform: uppercase;
 	border: 1px solid #fff;
@@ -263,25 +222,21 @@ body {
 	font-size: 16px;
 	line-height: 23px;
 }
-
 .slider .slide .carousel-inner .carousel-item .caption a:hover {
 	background-color: #c2212b;
 	border: 1px solid #c2212b;
 }
-
 .services {
 	display: inline;
 	float: left;
 	margin-top: -80px;
 	width: 100%;
 }
-
 .services .services-area {
 	display: inline;
 	float: left;
 	width: 100%;
 }
-
 .services .services-area .service-item {
 	background-color: #01bafd;
 	color: #fff;
@@ -290,11 +245,9 @@ body {
 	padding: 35px 25px;
 	text-align: center;
 }
-
 .services .services-area .service-item i {
 	font-size: 30px;
 }
-
 .services .services-area .service-item h3 {
 	font-size: 25px;
 	font-family: "Montserrat", sans-serif;
@@ -302,14 +255,12 @@ body {
 	line-height: 28px;
 	margin: 20px 0 10px 0;
 }
-
 .services .services-area .service-item p {
 	font-size: 16px;
 	font-weight: 100;
 	line-height: 23px;
 	font-family: "Roboto", sans-serif;
 }
-
 .services .services-area .service-item:nth-child(2) {
 	background-color: #2ecc71;
 }
@@ -398,6 +349,7 @@ body {
 
 .about-us .bs .modal-dialog .modal-content .modal-header {
 	border: none;
+	padding: 10px 2% 0 0 !important;
 }
 
 .about-us .bs .modal-dialog .modal-content .modal-header .close {
@@ -793,33 +745,6 @@ body {
 	a:hover {
 	color: #333333;
 }
-
-.latest-courses .courses-slider-indicator {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0;
-	margin: 50px 0 0 0;
-}
-
-.pass {
-	width: 20px;
-	height: 8px;
-	background-color: red;
-	margin: 10px;
-	border-radius: 4px;
-	color: #fff;
-	list-style: none;
-	margin-bottom: 0;
-	position: relative;
-	cursor: pointer;
-	opacity: 0.3;
-}
-
-.pass:hover {
-	opacity: 1;
-}
-
 .our-teachers .teachers-content .teacher-item .teacher-img {
 	background-color: #ccc;
 	position: relative;
@@ -1276,6 +1201,22 @@ body {
 	opacity: 1;
 }
 
+/* SLICK SLIDER STYLES START */
+.slick-dotted.slick-slider {
+	margin-bottom: 50px !important;
+}
+.slick-list {
+	margin: 0 0 20px 0 !important;
+}
+.slick-dots li button:before {
+	color: #df2b37 !important;
+	font-size: 10px !important;
+}
+.slick-dots li.slick-active button:before {
+	opacity: 1 !important;
+}
+/* SLICK SLIDER STYLES END */
+
 @keyframes animate {
 	0% {
 		transform: translateY(0);
@@ -1348,6 +1289,9 @@ body {
 	.features-content .features-item h4::after {
 		display: none;
 	}
+	.modal {
+		width: 99% !important;
+	}
 	.modal-video::after {
 		padding-top: 0 !important;
 		display: flex;
@@ -1364,6 +1308,8 @@ body {
 	.caption {
 		top: 2% !important;
 		padding: 0% 10% !important;
+		transform: translate(0px, -270px) !important;
+		position: unset !important;
 	}
 	.caption h4 {
 		font-size: 14px !important;
@@ -1375,9 +1321,9 @@ body {
 		margin: 0 !important;
 	}
 	.caption p {
-		font-size: 12px !important;
+		font-size: 14px !important;
 		line-height: 18px !important;
-		margin: 0px 0 20px !important;
+		margin: 0px 0 30px !important;
 	}
 	.caption a {
 		padding: 7px 15px !important;
@@ -1410,6 +1356,7 @@ body {
 	}
 }
 
+/* SCROLLBAR STYLES START */
 ::-webkit-scrollbar {
 	width: 8px;
 }
@@ -1422,6 +1369,7 @@ body {
 	background-color: #c2212b;
 	border-radius: 50px;
 }
+/* SCROLLBAR STYLES END */
 
 h1,
 h2,
