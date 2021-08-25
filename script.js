@@ -235,8 +235,16 @@ document.addEventListener("DOMContentLoaded", () => {
 	//  TEACHERS WITH CONSTRUCTOR END
 
 	//  FEATURES WITH CONSTRUCTOR START
+
+
 	class Features {
-		constructor(icon, coursesName, coursesDesc, coursesLink, parentSelectorFeatures) {
+		constructor(
+			icon,
+			coursesName,
+			coursesDesc,
+			coursesLink,
+			parentSelectorFeatures
+		) {
 			this.icon = icon;
 			this.coursesName = coursesName;
 			this.coursesDesc = coursesDesc;
@@ -251,7 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			elementFeatures.innerHTML = `
 				<div class="features-item">
-					<i class=${this.icon}></i>
+					<i class="${this.icon}"></i>
 					<h4>${this.coursesName}</h4>
 					<p>${this.coursesDesc}</p>
 					<a href=${this.coursesLink}>read more</a>
@@ -268,7 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		"#",
 		" .features-content .features-wrapper"
 	).render();
-	
+
 	new Features(
 		"fas fa-users",
 		"Expert Teachers",
@@ -278,7 +286,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		"#",
 		" .features-content .features-wrapper"
 	).render();
-	
+
 	new Features(
 		"fas fa-comment",
 		"Clubs",
@@ -288,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		"#",
 		" .features-content .features-wrapper"
 	).render();
-	
+
 	new Features(
 		"fas fa-university",
 		"Modern library",
@@ -298,7 +306,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		"#",
 		" .features-content .features-wrapper"
 	).render();
-	
+
 	new Features(
 		"fas fa-graduation-cap",
 		"100+ alumni",
@@ -308,7 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		"#",
 		" .features-content .features-wrapper"
 	).render();
-	
+
 	new Features(
 		"fas fa-certificate",
 		"Professional Certificate",
@@ -318,6 +326,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		"#",
 		" .features-content .features-wrapper"
 	).render();
-	
+
 	//  FEATURES WITH CONSTRUCTOR END
+
 });
