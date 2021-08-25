@@ -172,6 +172,7 @@ body {
 }
 .slider .slide .carousel-inner .carousel-item img {
 	filter: brightness(60%);
+	object-fit: cover;
 }
 .slider .slide .carousel-inner .carousel-item .caption {
 	position: absolute;
@@ -370,7 +371,7 @@ body {
 	background-size: 100%;
 	display: inline;
 	float: left;
-	padding: 100px 0;
+	padding: 10% 0;
 	width: 100%;
 }
 
@@ -1234,6 +1235,63 @@ body {
 	}
 }
 
+@media (min-width: 992px) {
+	.services {
+		margin: -50px 0 0 0;
+	}
+	.slider{
+		height: 60vh;
+	}
+	.slide{
+		height: 100%;
+	}
+	.carousel-inner{
+		height: 100%;
+	}
+	.carousel-item{
+		height: 100%;
+	}
+	.carousel-item img{
+		height: 100%;
+	}
+	.caption h2{
+		line-height: 60px !important;
+	}
+}
+@media (max-width: 991.98px) {
+	.services {
+		margin: 20px 0 40px 0;
+	}
+	.slider{
+		height: 70vh;
+	}
+	.slide{
+		height: 100%;
+	}
+	.carousel-inner{
+		height: 100%;
+	}
+	.carousel-item{
+		height: 100%;
+	}
+	.carousel-item img{
+		height: 100%;
+	}
+	.caption h2{
+		line-height: 60px !important;
+	}
+	.btn-group:nth-child(4){
+		display: none;
+	}
+	.btn-group:nth-child(5){
+		display: none;
+	}
+	.phone-item{
+		margin: 0 !important;
+		border: none !important;
+	} 
+}
+
 @media (max-width: 640px) {
 	.navbar-item {
 		display: none;
@@ -1354,6 +1412,7 @@ body {
 		display: block !important;
 	}
 }
+
 
 /* SCROLLBAR STYLES START */
 ::-webkit-scrollbar {
